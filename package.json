@@ -1,8 +1,8 @@
 {
-  "name": "react-native-button",
+  "name": "@scfe/react-native-button",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "MtButton.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
