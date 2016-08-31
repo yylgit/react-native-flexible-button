@@ -1,6 +1,6 @@
 {
   "name": "@scfe/react-native-button",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha",
   "description": "react-native-button",
   "keywords": ["mt-component","react-native", "button"]
   "main": "MtButton.js",
