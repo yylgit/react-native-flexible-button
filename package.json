@@ -1,12 +1,25 @@
 {
   "name": "@scfe/react-native-button",
-  "version": "1.0.0-alpha",
-  "description": "react-native-button",
-  "keywords": ["mt-component","react-native", "button"],
-  "main": "MtButton.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "description": "a simple react-native component",
+  "author": {
+    "name": "yangyiliang",
+    "email": "yangyiliang@meituan.com"
   },
-  "author": "yangyiliang",
-  "license": "ISC"
+  "keywords": [
+    "react-native",
+    "mt-component"
+  ],
+  "main": "index.js",
+  "examples": ["example/index.ios.js", "example/index.android.js"],
+  "scripts": {
+    "start": "react-native start",
+    "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",
+    "postinstall": "npm run clean:babelrc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "15.3.0",
+    "react-native": "0.32.0"
+  }
 }

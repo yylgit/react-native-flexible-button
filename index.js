@@ -3,15 +3,15 @@
 import React, { Component,PropTypes } from 'react';
 
 import {
-	StyleSheet,
-	View,
-	TouchableOpacity,
-	Text,
-	ActivityIndicator
-} 	from 'react-native';
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  Text,
+  ActivityIndicator
+}   from 'react-native';
 
 export default class MtButton extends Component {
-	static propTypes = {
+  static propTypes = {
         text: PropTypes.string,
         onPress: PropTypes.func,
         containerStyle: View.propTypes.style,
@@ -27,33 +27,33 @@ export default class MtButton extends Component {
 
 
     _onPress () {
-		let {
-  			onPress,
-  			disabled,
-  			isLoading
-  		} = this.props;
-  		if(disabled || isLoading) {
-  			return;
-  		}
-  		if(typeof onPress === 'function') {
-  			onPress();
-  		}
+    let {
+        onPress,
+        disabled,
+        isLoading
+      } = this.props;
+      if(disabled || isLoading) {
+        return;
+      }
+      if(typeof onPress === 'function') {
+        onPress();
+      }
     }
 
 
-  	render() {
-  		let {
-  			text,
-  			onPress,
-  			containerStyle,
-  			textStyle,
-  			disabled,
-  			isLoading,
+    render() {
+      let {
+        text,
+        onPress,
+        containerStyle,
+        textStyle,
+        disabled,
+        isLoading,
         disabledContainerStyle,
         disabledTextStyle,
         size,
         type
-  		} = this.props;
+      } = this.props;
       size = size ? size: 'default';
       let customSize = SizeMap[size];
       customSize = customSize ? customSize: SizeMap['default'];
@@ -62,7 +62,7 @@ export default class MtButton extends Component {
       let customType = TypeMap[type];
       customType = customType ? customType: TypeMap['default'];
 
-  		let finalContainerStyle = [];
+      let finalContainerStyle = [];
       let finalTextStyle = [];
       let activeOpacity = 0.2;
 
@@ -83,7 +83,7 @@ export default class MtButton extends Component {
       }
 
       //用户自定义样式
-  		finalContainerStyle.push(containerStyle);
+      finalContainerStyle.push(containerStyle);
       finalTextStyle.push(textStyle);
 
       //disabled 样式
@@ -93,18 +93,18 @@ export default class MtButton extends Component {
         finalTextStyle.push(styles.disabledTextStyle);
       }
 
-  		let content = null;
-  		if(isLoading) {
+      let content = null;
+      if(isLoading) {
         text = '';
         activeOpacity = 1;
-  			content = (
-  				<ActivityIndicator
+        content = (
+          <ActivityIndicator
           animating={true}
           size='small'
           style={styles.spinner}
           color={this.props.activityIndicatorColor || 'white'}
           />);
-  		}
+      }
 
       if(text) {
         content = (
@@ -131,12 +131,12 @@ export default class MtButton extends Component {
         content = (childElements);
       }
      
-	    return (
-	    	<TouchableOpacity {...this.props}  activeOpacity={activeOpacity}  style={finalContainerStyle}  onPress={this._onPress.bind(this)}>
-  				{content}	    
-	    	</TouchableOpacity>
-	    );
-  	}
+      return (
+        <TouchableOpacity {...this.props}  activeOpacity={activeOpacity}  style={finalContainerStyle}  onPress={this._onPress.bind(this)}>
+          {content}     
+        </TouchableOpacity>
+      );
+    }
 }
 
 const SizeMap = {
@@ -251,25 +251,25 @@ const TypeMap = {
 
 const btnHeight = 30;
 const styles = StyleSheet.create({
-	containerStyle: {
-		height: btnHeight,
-		backgroundColor: '#06c1ae',
-		alignItems: 'center',
-		justifyContent: 'center',
-		borderRadius: 3,
+  containerStyle: {
+    height: btnHeight,
+    backgroundColor: '#06c1ae',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 3,
     borderWidth: 1
-	},
-	textStyle: {
-		color: '#fff',
-		fontSize: 14
-	},
-	disabledTextStyle: {
-		color: 'rgba(187, 187, 187, 1)'
-	},
-	disabledContainerStyle: {
-		backgroundColor: 'rgba(211, 211, 211, 1)',
+  },
+  textStyle: {
+    color: '#fff',
+    fontSize: 14
+  },
+  disabledTextStyle: {
+    color: 'rgba(187, 187, 187, 1)'
+  },
+  disabledContainerStyle: {
+    backgroundColor: 'rgba(211, 211, 211, 1)',
     borderColor: 'rgba(211, 211, 211, 1)'
-	},
+  },
   spinner: {
     alignSelf: 'center',
   }
