@@ -1,11 +1,12 @@
 {
   "name": "@scfe/react-native-button",
   "version": "1.0.0",
-  "description": "",
+  "description": "react-native-button",
+  "keywords": ["mt-component","react-native", "button"]
   "main": "MtButton.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "yangyiliang",
   "license": "ISC"
 }
