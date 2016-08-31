@@ -8,7 +8,8 @@
   },
   "keywords": [
     "react-native",
-    "mt-component"
+    "mt-component",
+    "react-native-button"
   ],
   "main": "index.js",
   "examples": ["example/index.ios.js", "example/index.android.js"],

@@ -118,3 +118,53 @@ export default TestButton;
 
 # Screenshots
 ![image description](https://dn-cnode.qbox.me/FiFVHd2_hOui1yCvp7FExm4Avj_l)
+
+
+# 使用RT开发组件
+[使用rt工具开发React Native组件](http://wiki.sankuai.com/pages/viewpage.action?pageId=385700255)
+###### 使用rt生成的RN版本较低，需要升级React-Native
+这是是升级成
+```
+"dependencies": {
+    "react": "15.3.0",
+    "react-native": "0.32.0"
+  }
+```
+###### 升级后，直接运行如果build fail
+
+解决办法：
+
+TARGETS->Build Settings->Link->Other Linker Flags 下添加```-lc++```
+
+![image description](https://dn-cnode.qbox.me/FpUE0fSbBC0w-noGfDH6GkIUTH46)
+
+如果遇到js报错,是babel的原因
+![image description](https://dn-cnode.qbox.me/FoFhkNifOs27zELbrriop8kk0bRk)
+```
+transforming [========================================] 100% 399/400Error while persisting cache: TransformError: /Users/zzx/MyProject/node_modules/react-deep-force-update/lib/index.js: [BABEL] /Users/zzx/MyProject/node_modules/react-deep-force-update/lib/index.js: Unknown option: /Users/zzx/MyProject/node_modules/react-deep-force-update/.babelrc.stage
+```
+
+原因：
+新版本用的是babel 6版本，可是有些依赖的库并不是这个版本，就会导致这个错，所以解决方案就是把babel删了，升级依赖。
+
+解决方法：
+
+尝试1：
+
+手动删除/Users/zzx/MyProject/node_modules/react-deep-force-update/.babelrc 然后重启就解决了
+
+尝试2：
+
+修改package.json文件 
+
+    "scripts": {
+      "clean:babelrc": "find ./node_modules -name react-packager -prune -o -name '.babelrc' -print | xargs rm -f",
+      "postinstall": "npm run clean:babelrc"
+    }
+删除依赖重新安装
+
+    rm -rf node_modules
+    npm install
+
+
+    
