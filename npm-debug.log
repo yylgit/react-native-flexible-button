@@ -5,26 +5,34 @@
 1 verbose cli   '--disturl=https://npm.taobao.org/dist',
 1 verbose cli   '--userconfig=/Users/yyl/.mnpmrc',
 1 verbose cli   '--cache=/Users/yyl/.cache/mnpm',
-1 verbose cli   'login' ]
+1 verbose cli   'publish' ]
 2 info using npm@3.8.8
 3 info using node@v4.2.2
-4 verbose stack Error: canceled
-4 verbose stack     at Interface.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/read/lib/read.js:66:13)
-4 verbose stack     at emitNone (events.js:67:13)
-4 verbose stack     at Interface.emit (events.js:166:7)
-4 verbose stack     at Interface._ttyWrite (readline.js:690:16)
-4 verbose stack     at ReadStream.onkeypress (readline.js:105:10)
-4 verbose stack     at emitTwo (events.js:87:13)
-4 verbose stack     at ReadStream.emit (events.js:172:7)
-4 verbose stack     at emitKeys (readline.js:1250:14)
-4 verbose stack     at next (native)
-4 verbose stack     at ReadStream.onData (readline.js:918:36)
-5 verbose cwd /Users/yyl/meituan/work/yyl/mnpm/react-native-button
-6 error Darwin 15.6.0
-7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "--registry=http://r.npm.sankuai.com" "--disturl=https://npm.taobao.org/dist" "--userconfig=/Users/yyl/.mnpmrc" "--cache=/Users/yyl/.cache/mnpm" "login"
-8 error node v4.2.2
-9 error npm  v3.8.8
-10 error canceled
-11 error If you need help, you may report this error at:
-11 error     <https://github.com/npm/npm/issues>
-12 verbose exit [ 1, true ]
+4 verbose publish [ '.' ]
+5 verbose stack Error: Failed to parse json
+5 verbose stack Unexpected token 'm' at 6:4
+5 verbose stack   "main": "MtButton.js",
+5 verbose stack    ^
+5 verbose stack     at parseError (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:379:11)
+5 verbose stack     at parseJson (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:68:23)
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:48:5
+5 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+5 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:380:3)
+6 verbose cwd /Users/yyl/meituan/work/yyl/mnpm/react-native-button
+7 error Darwin 15.6.0
+8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "--registry=http://r.npm.sankuai.com" "--disturl=https://npm.taobao.org/dist" "--userconfig=/Users/yyl/.mnpmrc" "--cache=/Users/yyl/.cache/mnpm" "publish"
+9 error node v4.2.2
+10 error npm  v3.8.8
+11 error file /Users/yyl/meituan/work/yyl/mnpm/react-native-button/package.json
+12 error code EJSONPARSE
+13 error Failed to parse json
+13 error Unexpected token 'm' at 6:4
+13 error   "main": "MtButton.js",
+13 error    ^
+14 error File: /Users/yyl/meituan/work/yyl/mnpm/react-native-button/package.json
+15 error Failed to parse package.json data.
+15 error package.json must be actual JSON, not just JavaScript.
+15 error
+15 error This is not a bug in npm.
+15 error Tell the package author to fix their package.json file. JSON.parse
+16 verbose exit [ 1, true ]
