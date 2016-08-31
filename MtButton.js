@@ -17,11 +17,12 @@ export default class MtButton extends Component {
         containerStyle: View.propTypes.style,
         textStyle: Text.propTypes.style,
         disabled: PropTypes.bool,
+        isLoading: PropTypes.bool,
         disabledContainerStyle: View.propTypes.style,
         disabledTextStyle: Text.propTypes.style,
         activityIndicatorColor: PropTypes.string,
         size: PropTypes.string, //xs、sm、lg 、default
-        type: PropTypes.string  //default、primary、success、info 、warning、danger、link
+        type: PropTypes.string  //default、primary、success、info 、warning、danger、link、main
     };
 
 
