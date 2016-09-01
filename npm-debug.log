@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'dist-tag', 'ls' ]
+2 info using npm@3.8.8
+3 info using node@v4.2.2
+4 silly mapToRegistry name @scfe/react-native-button
+5 silly mapToRegistry scope (from package name) @scfe
+6 verbose mapToRegistry no registry URL found in name for scope @scfe
+7 silly mapToRegistry using default registry
+8 silly mapToRegistry registry https://registry.npmjs.org/
+9 silly mapToRegistry data Result {
+9 silly mapToRegistry   raw: '@scfe/react-native-button',
+9 silly mapToRegistry   scope: '@scfe',
+9 silly mapToRegistry   name: '@scfe/react-native-button',
+9 silly mapToRegistry   rawSpec: '',
+9 silly mapToRegistry   spec: 'latest',
+9 silly mapToRegistry   type: 'tag' }
+10 silly mapToRegistry uri https://registry.npmjs.org/@scfe%2freact-native-button
+11 verbose request uri https://registry.npmjs.org/-/package/@scfe%2freact-native-button/dist-tags
+12 verbose request no auth needed
+13 info attempt registry request try #1 at 11:01:04
+14 verbose request using bearer token for auth
+15 verbose request id ac33379726f78387
+16 http request GET https://registry.npmjs.org/-/package/@scfe%2freact-native-button/dist-tags
+17 http 404 https://registry.npmjs.org/-/package/@scfe%2freact-native-button/dist-tags
+18 verbose headers { 'content-type': 'application/json',
+18 verbose headers   'cache-control': 'max-age=0',
+18 verbose headers   'content-length': '11',
+18 verbose headers   'accept-ranges': 'bytes',
+18 verbose headers   date: 'Thu, 01 Sep 2016 03:01:06 GMT',
+18 verbose headers   via: '1.1 varnish',
+18 verbose headers   connection: 'keep-alive',
+18 verbose headers   'x-served-by': 'cache-itm7426-ITM',
+18 verbose headers   'x-cache': 'MISS',
+18 verbose headers   'x-cache-hits': '0',
+18 verbose headers   'x-timer': 'S1472698865.900844,VS0,VE692' }
+19 error dist-tag ls Couldn't get dist-tag data for @scfe/react-native-button
+20 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/-/package/@scfe%2freact-native-button/dist-tags
+20 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+20 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+20 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+20 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:200:22)
+20 verbose stack     at emitTwo (events.js:87:13)
+20 verbose stack     at Request.emit (events.js:172:7)
+20 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+20 verbose stack     at emitOne (events.js:82:20)
+20 verbose stack     at Request.emit (events.js:169:7)
+20 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:988:12)
+21 verbose statusCode 404
+22 verbose cwd /Users/yyl/meituan/work/yyl/mnpm/react-native-button
+23 error Darwin 15.6.0
+24 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "dist-tag" "ls"
+25 error node v4.2.2
+26 error npm  v3.8.8
+27 error code E404
+28 error 404 Registry returned 404 for GET on https://registry.npmjs.org/-/package/@scfe%2freact-native-button/dist-tags
+29 verbose exit [ 1, true ]

@@ -123,7 +123,7 @@ export default TestButton;
 # 使用RT开发组件
 [使用rt工具开发React Native组件](http://wiki.sankuai.com/pages/viewpage.action?pageId=385700255)
 ###### 使用rt生成的RN版本较低，需要升级React-Native
-这是是升级成
+这里升级成如下版本
 ```
 "dependencies": {
     "react": "15.3.0",
