@@ -86,4 +86,4 @@ const styles = StyleSheet.create({
   }
 });
 
-AppRegistry.registerComponent('@mtfe/react-native-button-index', () => testProject);
+AppRegistry.registerComponent('@scfe/react-native-button-index', () => testProject);

@@ -261,7 +261,8 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     color: '#fff',
-    fontSize: 14
+    fontSize: 14,
+    fontWeight: 'bold'
   },
   disabledTextStyle: {
     color: 'rgba(187, 187, 187, 1)'
