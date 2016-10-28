@@ -1,9 +1,9 @@
 # Install
 
 ```
-mnpm install @scfe/react-native-button  --save
+npm install react-native-button  --save
 ```
-仓库地址： ssh://git@git.sankuai.com/scfe/react-native-button.git
+仓库地址： https://github.com/yylgit/react-native-button
 
 # API
 
