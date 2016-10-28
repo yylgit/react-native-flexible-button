@@ -1,9 +1,9 @@
 # Install
 
 ```
-npm install react-native-button  --save
+npm install react-native-flexible-button  --save
 ```
-仓库地址： https://github.com/yylgit/react-native-button
+仓库地址： https://github.com/yylgit/react-native-flexible-button
 
 # API
 
